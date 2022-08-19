@@ -8,7 +8,7 @@ tasks:
   # - name: Postgres Status Check
   #   command: pg_ctl status
   - name: Postgres CLI
-    command: ./run-postgres.sh
+    command: cd src\main\resources && ./run-postgres.sh
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
