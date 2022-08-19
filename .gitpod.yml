@@ -8,10 +8,10 @@ tasks:
       psql -h localhost -d postgres
 
   - name: Maven
-    before: mvn install
+    before: mvn clean package
 
-  - name: Spring Boot
-    command: mvn package ./mvnw spring-boot:run
+  # - name: Spring Boot
+  #   command: ./mvnw spring-boot:run
 
 
     
