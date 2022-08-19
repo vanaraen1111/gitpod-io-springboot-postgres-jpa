@@ -4,10 +4,11 @@ image:
 tasks:
   - name: Maven
     before: mvn clean package
-
+    command: mvn package spring-boot:run
+  - name: Postgres Status Check
+    command: pg_ctl status
   - name: Postgres CLI
     before: psql -h localhost -d postgres
-    command: pg_ctl status
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
