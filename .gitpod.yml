@@ -3,12 +3,14 @@ image:
 
 tasks:
   - name: Maven
-    before: mvn clean package -DskipTests
-    command: mvn spring-boot:run
-  # - name: Postgres Status Check
-  #   command: pg_ctl status
-  - name: Postgres CLI
-    command: cd src/main/resources && ./run-postgres.sh
+    init: mvn clean package -DskipTests
+    before: 
+      mvn spring-boot:run
+    command: >
+      cd src/main/resources
+      ./run-postgres.sh
+  - name: Postgres Status Check
+    command: pg_ctl status
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
