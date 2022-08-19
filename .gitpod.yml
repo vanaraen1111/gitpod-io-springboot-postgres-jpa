@@ -2,11 +2,6 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Postgres Docker
-    before: |
-      docker run -it gitpod-dockerfile-test bash
-      psql -h localhost -d postgres
-
   - name: Maven
     before: mvn clean package
 
