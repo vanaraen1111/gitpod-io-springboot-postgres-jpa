@@ -1,5 +1,6 @@
-# You can find the new timestamped tags here: https://hub.docker.com/r/gitpod/workspace-full/tags
 FROM gitpod/workspace-postgresql
 
-# Install custom tools, runtime, etc.
-# RUN brew install fzf
+RUN sudo apt-get update \
+ && sudo apt-get install -y \
+    tool \
+ && sudo rm -rf /var/lib/apt/lists/*
