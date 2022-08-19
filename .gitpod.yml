@@ -2,5 +2,5 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: pg start
-    command: pg start
+  - before: pg_start
+  - init: ./mvnw spring-boot:run
