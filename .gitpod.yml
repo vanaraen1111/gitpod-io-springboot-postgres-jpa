@@ -2,5 +2,20 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - before: pg_start
-  - init: ./mvnw spring-boot:run
+  - name: Postgres Docker
+    init: |
+      docker run -it gitpod-dockerfile-test bash
+      psql -h localhost -d postgres
+
+  - name: Maven
+    init: mvn install
+
+  - name: Spring Boot
+    init: mvn package ./mvnw spring-boot:run
+
+
+    
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 3000
+    onOpen: open-preview
