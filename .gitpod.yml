@@ -4,7 +4,7 @@ image:
 tasks:
   - name: Maven
     before: mvn clean package -DskipTests
-    command: mvn package spring-boot:run
+    command: mvn spring-boot:run
   - name: Postgres Status Check
     command: pg_ctl status
   - name: Postgres CLI
