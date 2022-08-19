@@ -3,15 +3,15 @@ image:
 
 tasks:
   - name: Postgres Docker
-    init: |
+    before: |
       docker run -it gitpod-dockerfile-test bash
       psql -h localhost -d postgres
 
   - name: Maven
-    init: mvn install
+    before: mvn install
 
   - name: Spring Boot
-    init: mvn package ./mvnw spring-boot:run
+    command: mvn package ./mvnw spring-boot:run
 
 
     
