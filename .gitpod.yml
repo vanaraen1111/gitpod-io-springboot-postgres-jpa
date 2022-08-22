@@ -1,11 +1,11 @@
 image:
   file: .gitpod.Dockerfile
 
-# tasks:
-  # - name: Spring Boot Run
-  #   init: mvn clean package -DskipTests
-  #   before: 
-  #     mvn spring-boot:run
+ tasks:
+  - name: Spring Boot Run
+    init: mvn clean package -DskipTests
+    before: 
+      mvn spring-boot:run
 
   # - name: Postgres Status Check
   #   command: pg_ctl status
