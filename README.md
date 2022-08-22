@@ -9,6 +9,7 @@ Database used : Postgres docker image by gitpod.io (https://www.gitpod.io/blog/g
 2) Init Postgres Data
 In terminal PostGres DB Init (using psql CLI), type this command :
 ```sh
+psql
 \i schema-postgres.sql 
 \i data-postgres.sql
 ```
