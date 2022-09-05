@@ -25,9 +25,9 @@ psql
 ```
 ### Connect to a database:
 ```sh
-\c <databasename> 
+\c postgres
 ```
 ### View table:
 ```sh
-SELECT * from <tablename>; //don't forget semicolon, superimportant!
+SELECT * from cities; //don't forget semicolon, superimportant!
 ```
