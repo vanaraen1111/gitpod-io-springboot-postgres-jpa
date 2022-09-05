@@ -7,10 +7,9 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
     sdk install java 17.0.3-ms && \
     sdk default java 17.0.3-ms"
 
-ARG base
-FROM gitpod/workspace-postgresql
+# FROM gitpod/workspace-postgresql
 
-USER gitpod
+# USER gitpod
 
 # Dazzle does not rebuild a layer until one of its lines are changed. Increase this counter to rebuild this layer.
 ENV TRIGGER_REBUILD=2
