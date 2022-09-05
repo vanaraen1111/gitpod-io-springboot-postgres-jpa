@@ -10,5 +10,4 @@ public class SpringDataJpaApplication {
 		SpringApplication.run(SpringDataJpaApplication.class, args);
 		System.out.println("hello World!");
 	}
-
 }

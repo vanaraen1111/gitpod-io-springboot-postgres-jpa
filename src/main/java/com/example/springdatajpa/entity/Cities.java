@@ -1,4 +1,5 @@
 package com.example.springdatajpa.entity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +18,9 @@ public class Cities {
     String name;
     @Column(name = "`population`")
     Integer population;
-    
+
+    public Cities() {
+    }
     public Integer getId() {
         return id;
     }
@@ -36,6 +39,8 @@ public class Cities {
     public void setPopulation(Integer population) {
         this.population = population;
     }
-
-    
+    @Override
+    public String toString() {
+        return "Cities [id=" + id + ", name=" + name + ", population=" + population + "]";
+    }
 }
