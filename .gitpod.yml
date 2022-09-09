@@ -10,10 +10,6 @@ tasks:
   # - name: Postgres Status Check
   #   command: pg_ctl status
 
-  # - name: Postgres DB init
-  #   before: cd src/main/resources
-  #   init: ./run-postgres.sh
-
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
