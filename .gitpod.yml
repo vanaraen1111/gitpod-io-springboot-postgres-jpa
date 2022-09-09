@@ -8,8 +8,10 @@ tasks:
       mvn spring-boot:run
 
   - name: Redis Server
-    before: redis-server
-    command: redis-cli
+    command: redis-server
+
+  # - name: Redis CLI
+  #   command: redis-cli
 
   # - name: Postgres Status Check
   #   command: pg_ctl status
