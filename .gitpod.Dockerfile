@@ -5,6 +5,12 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
     sdk install java 17.0.3-ms && \
     sdk default java 17.0.3-ms"
 
+# Install Redis.
+RUN sudo apt-get update \
+ && sudo apt-get install -y \
+  redis-server \
+ && sudo rm -rf /var/lib/apt/lists/*
+
 # Dazzle does not rebuild a layer until one of its lines are changed. Increase this counter to rebuild this layer.
 ENV TRIGGER_REBUILD=2
 ENV PGWORKSPACE="/workspace/.pgsql"
