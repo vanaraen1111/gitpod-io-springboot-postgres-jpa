@@ -8,39 +8,50 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "`cities`") 
-public class Cities {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "`id`")
-    Integer id;
-    @Column(name = "`name`")
-    String name;
-    @Column(name = "`population`")
-    Integer population;
+@Table(name = "`Cities`", schema = "public")
+public class City {
 
-    public Cities() {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    @Column(name="`Id`")
+    private Long id;
+
+    @Column(name="`Name`")
+    private String name;
+
+    @Column(name="`Population`")
+    private int population;
+
+    public City() {
     }
-    public Integer getId() {
+
+    public Long getId() {
         return id;
     }
-    public void setId(Integer id) {
+
+    public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public Integer getPopulation() {
+
+    public int getPopulation() {
         return population;
     }
-    public void setPopulation(Integer population) {
+
+    public void setPopulation(int population) {
         this.population = population;
     }
+
     @Override
     public String toString() {
-        return "Cities [id=" + id + ", name=" + name + ", population=" + population + "]";
+        return "City [id=" + id + ", name=" + name + ", population=" + population + "]";
     }
 }
