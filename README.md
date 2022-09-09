@@ -8,15 +8,7 @@ Postgres docker image by gitpod.io (https://www.gitpod.io/blog/gitpodify#postgre
 - Just open the workspace
 (gitpod.DockerFile already configured with Java 17 & Postgres)
 (Using gitpod tasks in .gitpod.yml, spring boot already configured to automatically run upon loading workspace)
-
-2) Init Postgres Data
-(Havent successfully configure to auto load schema and data at this point)
-In terminal PostGres DB Init (using psql CLI), type this command :
-```sh
-psql
-\i schema.sql 
-\i data.sql
-```
+- db auto schema creation and auto init
 
 ## PSQL CLI Commands
 ### View available databases:
