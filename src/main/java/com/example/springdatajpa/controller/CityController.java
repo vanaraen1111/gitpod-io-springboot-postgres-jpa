@@ -12,6 +12,6 @@ public class CityController {
     
     @GetMapping("/api/cities/all")
     public String getAllCities() {
-        return cityServices.toString();
+        return cityServices.list().toString();
     }
 }
