@@ -11,6 +11,9 @@ RUN sudo apt-get update \
   redis-server \
  && sudo rm -rf /var/lib/apt/lists/*
 
+# Install Curl
+RUN sudo apt install curl
+
 # Dazzle does not rebuild a layer until one of its lines are changed. Increase this counter to rebuild this layer.
 ENV TRIGGER_REBUILD=2
 ENV PGWORKSPACE="/workspace/.pgsql"

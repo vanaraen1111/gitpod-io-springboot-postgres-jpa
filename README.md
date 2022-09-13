@@ -32,5 +32,5 @@ List of Redis-CLI command here : https://redis.io/docs/manual/cli/
 ```
 ### View table:
 ```sh
-SELECT * from cities; //don't forget semicolon, superimportant!
+SELECT * from "Cities"; //don't forget semicolon, superimportant!
 ```
