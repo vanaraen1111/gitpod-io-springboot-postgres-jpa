@@ -11,12 +11,10 @@ tasks:
   - name: Redis Server
     command: redis-server
 
-  # - name: Redis CLI
-  #   command: redis-cli
-
-  # - name: Postgres Status Check
-  #   command: pg_ctl status
-
+# - name: Redis CLI
+#   command: redis-cli
+# - name: Postgres Status Check
+#   command: pg_ctl status
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
@@ -25,3 +23,5 @@ ports:
 vscode:
   extensions:
     - humao.rest-client
+    - redhat.java
+    - vscjava.vscode-java-pack
