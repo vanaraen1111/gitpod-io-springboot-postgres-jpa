@@ -25,3 +25,4 @@ vscode:
     - humao.rest-client
     - redhat.java
     - vscjava.vscode-java-pack
+    - SonarSource.sonarlint-vscode
