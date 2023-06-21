@@ -18,8 +18,13 @@ public class CitiesServices {
         return cityRepository.findAll();
     }
 
-    public Optional<City> getCityById(Integer id) {
-        System.out.println("getCity:: " + cityRepository.findById(id));
-        return cityRepository.findById(id);
+    public City getCityById(Integer id) {
+        Optional<City> city = cityRepository.findById(id);
+        if (city.isPresent()) {
+            return city.get();
+        } else {
+            return null;
+        }
+      
     }
 }
