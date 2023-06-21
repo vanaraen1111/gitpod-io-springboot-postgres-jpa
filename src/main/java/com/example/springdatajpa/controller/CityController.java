@@ -24,9 +24,9 @@ public class CityController {
     }
 
     @GetMapping("api/cities/{id}")
-    public ResponseEntity<BaseResponse> getCitiesById(@NonNull String id) {
+    public ResponseEntity<BaseResponse> getCitiesById(int id) {
         BaseResponse response = new BaseResponse();
-        response.setResponseData(citiesServices.list());
+        response.setResponseData(citiesServices.getCityById(id));
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 

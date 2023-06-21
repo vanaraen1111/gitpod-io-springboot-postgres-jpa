@@ -1,3 +1,5 @@
+##for gitpod.io, apparently will get unauthorized from rest client extension, use embedded browser in gitpod.io instead
+
 @hostname = https://8080-vanaraen111-gitpodiospr-aw0gfwdoyry.ws-us100.gitpod.io/city-api/
 ##change accordingly to current gitpod instance, refer to PORTS tab
 @cityapi = api/cities
@@ -6,4 +8,6 @@
 ### View All Cities
 GET {{hostname}}/{{cityapi}}
 
-##apparently will get unauthorized from rest client extension, use embedded browser in gitpod.io instead
+### Get City By Id
+GET {{hostname}}/{{cityapi}}/3
+
