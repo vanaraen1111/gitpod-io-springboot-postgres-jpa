@@ -3,7 +3,6 @@ package com.example.springdatajpa.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +23,7 @@ public class CityController {
     }
 
     @GetMapping("api/cities/{id}")
-    public ResponseEntity<BaseResponse> getCitiesById(int id) {
+    public ResponseEntity<BaseResponse> getCitiesById(Integer id) {
         BaseResponse response = new BaseResponse();
         response.setResponseData(citiesServices.getCityById(id));
         return new ResponseEntity<>(response, HttpStatus.OK);

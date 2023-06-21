@@ -18,7 +18,8 @@ public class CitiesServices {
         return cityRepository.findAll();
     }
 
-    public Optional<City> getCityById(int id) {
+    public Optional<City> getCityById(Integer id) {
+        System.out.println("getCity:: " + cityRepository.findById(id));
         return cityRepository.findById(id);
     }
 }
