@@ -1,6 +1,8 @@
 package com.example.springdatajpa.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,4 +18,7 @@ public class CitiesServices {
         return cityRepository.findAll();
     }
 
+    public Optional<City> getCityById(int id) {
+        return cityRepository.findById(id);
+    }
 }
