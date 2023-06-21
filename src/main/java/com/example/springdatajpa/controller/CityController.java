@@ -2,7 +2,9 @@ package com.example.springdatajpa.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatus$Series;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus.Series;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +22,7 @@ public class CityController {
     public ResponseEntity<BaseResponse> getCities() {
         BaseResponse response = new BaseResponse();
         response.setResponseData(citiesServices.list());
+        response.setStatus(Series.SUCCESSFUL.name());
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -27,6 +30,7 @@ public class CityController {
     public ResponseEntity<BaseResponse> getCitiesById(@RequestParam(value = "id") Long id) {
         BaseResponse response = new BaseResponse();
         response.setResponseData(citiesServices.getCityById(id));
+        response.setStatus(Series.SUCCESSFUL.name());
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
