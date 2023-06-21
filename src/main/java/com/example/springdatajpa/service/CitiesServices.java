@@ -18,7 +18,7 @@ public class CitiesServices {
         return cityRepository.findAll();
     }
 
-    public City getCityById(Integer id) {
+    public City getCityById(Long id) {
         Optional<City> city = cityRepository.findById(id);
         if (city.isPresent()) {
             return city.get();

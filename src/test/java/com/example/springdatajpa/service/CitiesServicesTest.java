@@ -27,14 +27,14 @@ public class CitiesServicesTest {
         City citythree = new City();
         citythree.setName("Prague");
 
-        when(cityRepository.findById(3)).thenReturn(Optional.of(citythree));
+        when(cityRepository.findById(new Long(3))).thenReturn(Optional.of(citythree));
 
-        assertEquals("Prague", citiesServices.getCityById(3).getName());
+        assertEquals("Prague", citiesServices.getCityById(new Long(3)).getName());
     }
 
     @Test
     void testGetCityById_whenGetNull_returnNull() {
-        when(cityRepository.findById(3)).thenReturn(Optional.empty());
-        assertNull(citiesServices.getCityById(3));
+        when(cityRepository.findById(new Long(3))).thenReturn(Optional.empty());
+        assertNull(citiesServices.getCityById(new Long(3)));
     }
 }

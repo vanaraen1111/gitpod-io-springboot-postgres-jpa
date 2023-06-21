@@ -15,7 +15,7 @@ public class City {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     @Column(name="`Id`")
-    private int id;
+    private Long id;
 
     @Column(name="`Name`")
     private String name;
@@ -26,11 +26,11 @@ public class City {
     public City() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
