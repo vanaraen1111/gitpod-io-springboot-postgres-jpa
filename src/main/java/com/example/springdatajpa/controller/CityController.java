@@ -23,7 +23,7 @@ public class CityController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("api/cities")
+    @GetMapping("api/cities/id")
     public ResponseEntity<BaseResponse> getCitiesById(@RequestParam(value = "id") Integer id) {
         BaseResponse response = new BaseResponse();
         response.setResponseData(citiesServices.getCityById(id));
