@@ -1,4 +1,4 @@
-@hostname = https://8080-vanaraen111-gitpodiospr-4nor12gn5bd.ws-us100.gitpod.io
+@hostname = http://8080-vanaraen111-gitpodiospr-esd3tfan0xl.ws-us100.gitpod.io
 @cityapi = api/cities
 
 
